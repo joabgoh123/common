@@ -18,7 +18,7 @@ func (se *HttpServerError) Error() string {
 func (se *HttpServerError) ErrorLog() {
 	log.WithFields(log.Fields{
 		"errors": &se,
-	}).Info("A server error has occured!!")
+	})
 }
 
 func (se *HttpServerError) ResponseHeaders() (int, map[string]string){
