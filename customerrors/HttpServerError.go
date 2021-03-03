@@ -1,8 +1,6 @@
 package customerrors
 
 import (
-	"fmt"
-
 	log "github.com/sirupsen/logrus"
 )
 
