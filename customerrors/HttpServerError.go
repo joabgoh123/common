@@ -18,9 +18,8 @@ func (se *HttpServerError) Error() string {
 }
 
 func (se *HttpServerError) ErrorLog() {
-	fmt.Println("ErrorLog called!!")
 	log.WithFields(log.Fields{
-		"errors": &se,
+		"errors": se,
 	})
 }
 
