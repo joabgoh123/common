@@ -1,8 +1,6 @@
 package customerrors
 
 import (
-	"fmt"
-
 	log "github.com/sirupsen/logrus"
 )
 
@@ -18,10 +16,9 @@ func (se *HttpServerError) Error() string {
 }
 
 func (se *HttpServerError) ErrorLog() {
-	fmt.Println("Testing!")
 	log.WithFields(log.Fields{
 		"errors": se,
-	})
+	}).Info("Server error occured")
 }
 
 func (se *HttpServerError) ResponseHeaders() (int, map[string]string){
